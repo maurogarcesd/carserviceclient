@@ -3,16 +3,15 @@
    <mat-card class="card">
       <mat-card-header>
         <mat-card-title>{{car.name}}</mat-card-title>
-        <mat-card-subtitle><p>Owner: {{car.ownerDni}}</p></mat-card-subtitle>
-        
+        <mat-card-subtitle><p>Owner: {{car.owner}}</p></mat-card-subtitle>
       </mat-card-header>
-      <img mat-card-image src="{{car.giphyUrl}}" alt="{{car.name}}" width="360px" height="240px" style="align-items: stretch">
-      <br>
+         
           <mat-card-content>
-
+              <img mat-card-image src="{{car.giphyUrl}}" alt="{{car.name}}" width="360px" height="240px" style="align-items: stretch">
           </mat-card-content>
           
-      <mat-card-actions>
+         <mat-card-actions>
+           <p></p>
         <button mat-stroked-button [routerLink]="['/car-edit', car.id]">Edit Car</button>
         <button mat-stroked-button (click)="remove(car.id)">Remove Owner</button>
       </mat-card-actions>
