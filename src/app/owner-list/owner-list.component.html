@@ -1,5 +1,5 @@
 <mat-card>
-        <mat-card-title>Owner List</mat-card-title>
+        <mat-card-title>Owners List</mat-card-title>
         <mat-card-content>
           <mat-list>
             <mat-list-item *ngFor="let owner of owners">
@@ -9,6 +9,8 @@
             </mat-list-item>
           </mat-list>
         </mat-card-content>
+      <button mat-fab color="primary" [routerLink]="['/owner-edit']">Add</button>
+
       
-        <button mat-fab color="primary" [routerLink]="['/owner-edit']">Add</button>
 </mat-card>
+
