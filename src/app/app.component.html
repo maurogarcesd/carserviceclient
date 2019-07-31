@@ -1,15 +1,14 @@
 <mat-toolbar color="primary">
-  <span>Welcome to </span>
-</mat-toolbar>
+  </mat-toolbar>
 
 <router-outlet></router-outlet>
 <mat-toolbar color="black">
 
     <mat-toolbar-row>
-      <span>{{title}}!</span>
-      <button mat-flat-button color="accent" class="menu-button" [routerLink]="['/car-list']">Car List</button>
-      <button mat-flat-button color="accent" class="menu-button" [routerLink]="['/owner-list']">Owner List</button>
-      <button mat-flat-button color="accent" class="menu-button" [routerLink]="['/car-add']">Add a car</button>
+      <span>W E L C O M E TO {{title}}!</span>
+      <button mat-raised-button  class="menu-button" [routerLink]="['/car-list']">Car List</button>
+      <button mat-raised-button  class="menu-button" [routerLink]="['/owner-list']">Owner List</button>
+      <button mat-raised-button  class="menu-button" [routerLink]="['/car-add']">Add a car</button>
     </mat-toolbar-row>
   </mat-toolbar>
   

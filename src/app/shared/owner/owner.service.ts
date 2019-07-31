@@ -6,39 +6,28 @@ import {Observable} from 'rxjs'
   providedIn: 'root'
 })
 export class OwnerService {
-public API = 'https://thawing-chamber-47973.herokuapp.com/owners';
-
+public API_OWNERS = 'https://thawing-chamber-47973.herokuapp.com/owners';
+public API_OWNER = 'https://thawing-chamber-47973.herokuapp.com';
   constructor(private http: HttpClient) { }
 
   getAll(): Observable<any>{
-    return this.http.get(this.API);
+    return this.http.get(this.API_OWNERS);
   }
 
-  createOwner(owner){
-    // const owner = {
-    //   dni:'05',
-    //   name:'Luke Skywalker',
-    //   profession:'Jedi'
-    // }
-    this.http.post(this.API, owner).subscribe( response =>{
-      console.log('POST', response);      
-    })
+  getOwner(dni):Observable<any>{    
+    return this.http.get(this.API_OWNER + '/owner?dni=' + dni);
   }
 
-  deleteOwner(href){
-    this.http.delete(href).subscribe( response =>{
-      console.log('POST', response);      
-    })
+  createOwner(owner):Observable<any>{
+    
+    return this.http.post(this.API_OWNERS, owner);
   }
-
-  updateOwner(href, owner){
-    // const body = {
-    //   dni:'05',
-    //   name:'Luke Skywalker',
-    //   profession:'Nothing'
-    // }
-    this.http.put(href, owner).subscribe( response =>{
-      console.log('POST', response);      
-    })
+  updateOwner(href, owner):Observable<any>{
+    
+    return this.http.put(href, owner);
+  }
+  deleteOwner(href):Observable<any>{
+    return this.http.delete(href);  
+  
   }
 }
