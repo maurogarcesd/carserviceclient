@@ -1,0 +1,15 @@
+.mat-toolbar.mat-primary{
+    background: #0bb691;
+    color: #fff;
+}
+
+.example-icon {
+    padding: 0 14px;
+}
+  
+.example-spacer {
+    flex: 1 1 auto;
+}
+.menu-button{
+    margin: 20px;
+}
