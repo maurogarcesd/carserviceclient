@@ -20,9 +20,9 @@ const routes: Routes = [
     component: OwnerEditComponent
   },
   {
-    path: 'owner-edit/:href',
-    component: OwnerEditComponent
-  },
+  path: 'owner-edit/:id',
+  component: OwnerEditComponent
+},
   
   {
     path: 'car-add',
