@@ -17,10 +17,9 @@
         </mat-select>
       </mat-form-field>
       <mat-card-actions>
-        <button mat-raised-button color="primary" type="submit" [disabled]="!carForm.form.valid">Save</button>
-        <button mat-raised-button color="secondary" (click)="remove(car.href)" *ngIf="car.href"
-          type="button">Delete</button>
-        <a mat-button routerLink="/car-list">Cancel</a>
+        <button mat-raised-button type="submit" [disabled]="!carForm.form.valid">Save</button>
+        <button mat-raised-button  (click)="remove(car.href)" *ngIf="car.href" type="button">Delete</button>
+        <a mat-raised-button routerLink="/car-list">Cancel</a>
       </mat-card-actions>
       <mat-card-footer>
         <div class="giphy">
